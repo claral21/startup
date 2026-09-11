@@ -4,12 +4,6 @@
 
 MEtronome is a web application used to customize and digitize the auditory functions of a physical metronome. It utilizes elements of full stack development as it provides secure login and audio storage services to users. MEtronome also portrays live updates between users when new sounds are recorded, and offers randomized sound clips to any user through a public api. It's designed to work across multiple different screen types.
 
-> [!NOTE]
-> This is a template for your startup application. You must modify this `README.md` file for each phase of your development. You only need to fill in the section for each deliverable when that deliverable is submitted in Canvas. Without completing the section for a deliverable, the TA will not know what to look for when grading your submission. Feel free to add additional information to each deliverable description, but make sure you at least have the list of rubric items and a description of what you did for each item.
-
-> [!NOTE]
-> If you are not familiar with Markdown then you should review the [documentation](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) before continuing.
-
 ### Elevator pitch
 
 Have you ever struggled with your rythym, but can't stand the sound of your metronome? Allow me to introduce you to MEtronome! The only digital metronome that not only functions on your phone, but also your computer or tablet! MEtronome uses modern AI and public api resources to allow YOU to choose what sound keeps the beat. You and your friends can select from an assortment of randomly generated metronome sounds, or make your own! All while MEtronome sends you live notifications with each sound created. Try it today and elevate your rythmic experience!
