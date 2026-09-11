@@ -12,7 +12,7 @@ A brief description of the application here. Lorem ipsum dolor sit amet, consect
 
 ### Elevator pitch
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Have you ever struggled with your rythym, but can't stand the sound of your metronome? Allow me to introduce you to MEtronome! The only digital metronome that not only functions on your phone, but also your computer or tablet! MEtronome uses modern AI and public api resources to allow YOU to choose what sound keeps the beat. You and your friends can select from an assortment of randomly generated metronome sounds, or make your own! All while MEtronome sends you live notifications with each sound created. Try it today and elevate your rythmic experience!
 
 ### Design
 
