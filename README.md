@@ -26,10 +26,13 @@ See the above example of the two main screens the app will utilize
 
 I am going to use the required technologies in the following ways.
 
-- **HTML** - 
-- **CSS** - Description here
-- **React** - Description here
-- **Service** - Description here
+- **HTML** - Creating a solid structure for both my login page and main webpage. Using HTML with correct structure and including any necessary links to simon or other third parties.
+- **CSS** - Styling my application in a simple but elegant way, using basic colors to complement the metronome symbol in a way that will adjust well to various screen sizes. And making the buttons look like buttons.
+- **React** - Providing the live, moving parts of the frontend, namely displaying the notifications of created sounds, the login, capturing sound clip naming, and other more complex graphic elements such as altering icons during user interaction. 
+- **Service** - Provides standard backend service with endpoints for:
+user login information
+saving audio clips & names
+
 - **DB/Login** - Description here
 - **WebSocket** - Description here
 
