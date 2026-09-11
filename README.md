@@ -29,12 +29,12 @@ I am going to use the required technologies in the following ways.
 - **HTML** - Creating a solid structure for both my login page and main webpage. Using HTML with correct structure and including any necessary links to simon or other third parties.
 - **CSS** - Styling my application in a simple but elegant way, using basic colors to complement the metronome symbol in a way that will adjust well to various screen sizes. And making the buttons look like buttons.
 - **React** - Providing the live, moving parts of the frontend, namely displaying the notifications of created sounds, the login, capturing sound clip naming, and other more complex graphic elements such as altering icons during user interaction. 
-- **Service** - Provides standard backend service with endpoints for:
+- **Service** - Interacts with https://freesound.org/docs/api/ api and sends data to frontend. Provides other standard backend service with endpoints for:
 user login information
 saving audio clips & names
 
-- **DB/Login** - Description here
-- **WebSocket** - Description here
+- **DB/Login** - Storing authentication, login, and audio information
+- **WebSocket** - Sending data about stored audio files in real time as notifications to all users
 
 ## 🚀 Specification Deliverable
 
@@ -44,7 +44,7 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 - [X] Proper use of Markdown
 - [X] A concise and compelling elevator pitch
 - [X] Description of key features
-- [ ] Description of how you will use each technology including your 3rd party API and use of WebSocket
+- [x] Description of how you will use each technology including your 3rd party API and use of WebSocket
 - [X] One or more rough sketches of your application. Images must be embedded in this file using Markdown image references.
 
 ## 🚀 AWS deliverable
