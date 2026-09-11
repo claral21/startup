@@ -16,9 +16,11 @@ See the above example of the two main screens the app will utilize
 
 ### Key features
 
-- Describe your key feature
-- Describe your key feature
-- Describe your key feature
+- Records and persistently stores sound clips for playback at various speeds
+- Provides 3rd party random sound clips for alternative use
+- Offers a secure user login experience through HTTPS
+- Has user input options to control tempo, play audio, and name sound clips
+- Notifies all users of any newly created sounds
 
 ### Technologies
 
