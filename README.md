@@ -33,8 +33,8 @@ I am going to use the required technologies in the following ways.
 user login information
 saving audio clips & names
 
-- **DB/Login** - Storing authentication, login, and audio information
-- **WebSocket** - Sending data about stored audio files in real time as notifications to all users
+- **DB/Login** - Stores authentication, login, and audio information
+- **WebSocket** - Sends data about stored audio files in real time as notifications to all users
 
 ## 🚀 Specification Deliverable
 
