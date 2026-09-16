@@ -14,6 +14,10 @@ This file represents what I have learned about web programming.
 ## AWS
 
 Interesting things I have learned about AWS
+AWS is very confusing haha, but this is the command I can use to access my server
+ssh -i ./keys_to_the_universe/clara_pemkey.pem ubuntu@44.219.172.115
+And the elastic ip address: 44.219.172.115
+I learned how to go in and change up settings all the time as well for my AWS server. I think I could use a VPN with a set IP address to limit ssh access to the server if I wanted to.
 
 ## HTML
 
