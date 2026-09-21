@@ -22,7 +22,7 @@ I learned how to go in and change up settings all the time as well for my AWS se
 
 ## HTML
 
-Interesting things I have learned about HTML
+Interesting things I have learned about HTML: There are many ways to do the same thing, and I'm kind of in charge! I figured out the difference between in-line and block HTML and figured out and reviewed the syntax for some tags I forgot.
 
 ## React
 
