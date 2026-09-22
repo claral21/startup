@@ -59,16 +59,16 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] I completed the prerequisites for this deliverable (Simon deployed, GitHub link, Git commits)
-- [ ] **HTML pages** - I did not complete this part of the deliverable.
-- [ ] **Proper HTML element usage** - I did not complete this part of the deliverable.
-- [ ] **Links** - I did not complete this part of the deliverable.
-- [ ] **Text** - I did not complete this part of the deliverable.
-- [ ] **3rd party API placeholder** - I did not complete this part of the deliverable.
-- [ ] **Images** - I did not complete this part of the deliverable.
-- [ ] **Login placeholder** - I did not complete this part of the deliverable.
-- [ ] **DB data placeholder** - I did not complete this part of the deliverable.
-- [ ] **WebSocket placeholder** - I did not complete this part of the deliverable.
+- [X] I completed the prerequisites for this deliverable (Simon deployed, GitHub link, Git commits)
+- [X] **HTML pages** - I made two pages for easy navigation between login services and main functionality.
+- [X] **Proper HTML element usage** - I created a good base for the rest of my website using proper HTML structure and syntax.
+- [X] **Links** - I inserted links between pages as well as to my personal github repository.
+- [X] **Text** - There is text instruction through titles, headers, buttons, tables, etc.
+- [X] **3rd party API placeholder** - I insterted a button meant to trigger an API call.
+- [X] **Images** - I have an image displayed on both HTML pages.
+- [X] **Login placeholder** - On the login page I have a placeholder for login storage and authentication.
+- [X] **DB data placeholder** - My text box to save sound names will initiate saving both the names and sound clips to the database.
+- [X] **WebSocket placeholder** - The table on the start page has a place to display notifications about other users.
 
 ## 🚀 CSS deliverable
 
