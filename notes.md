@@ -24,6 +24,12 @@ I learned how to go in and change up settings all the time as well for my AWS se
 
 Interesting things I have learned about HTML: There are many ways to do the same thing, and I'm kind of in charge! I figured out the difference between in-line and block HTML and figured out and reviewed the syntax for some tags I forgot.
 
+## CSS
+
+These are some notes from my class.
+- Firstly, flex is useful and important. Use flexboxfroggy to learn more! There are a lot of cool commands I can use through flex to make my website design flexible and pretty.
+- Bootstrap is millions of lines of free CSS that I can use after importing bootstrap. It makes things pretty for me.
+
 ## React
 
 Interesting things I have learned about React
