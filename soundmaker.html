@@ -21,7 +21,13 @@
       <h3>
         Hello [User Name]! Begin by recording your own sound or selecting a random one!
       </h3>
-      <table style="margin-left: auto; display: block; width: max-content;">
+
+      <!-- Since we don't have the ability to style we use old style HTML to give some visual formatting -->
+      <hr />
+    </header>
+    <main>
+        <aside>
+             <table style="margin-left: auto; display: block; width: max-content;">
         <tr>
             <th>Latest</th>
             <th>MEtronome Makers</th>
@@ -39,19 +45,15 @@
             <td>Made a New Sound</td>
         </tr>
       </table>
-
-      <!-- Since we don't have the ability to style we use old style HTML to give some visual formatting -->
-      <hr />
-    </header>
-    <main>
+        </aside>
         <!--My main code goes here! -->
-        <img src="metronome_icon2.png" width="300">
+        <img src="metronome_icon2.png" alt="MetronomeIMG" width="300">
         <div>
             <label for="number">Tempo: </label>
             <input type="number" name="vNumber" id="number" min="10" max="150" step="5" />  
         </div>
         <label for="text">Name/Rename current sound: </label>
-        <input type="text" id="text" name="vText" required pattern="[Aa].*" />
+        <input type="text" id="text" name="vText" />
         <button type="submit">Save</button>
         <label for="select">Saved Sounds: </label>
         <select id="select" name="vSelect">
