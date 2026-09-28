@@ -32,9 +32,15 @@ These are some notes from my class.
 
 ## React
 
-Interesting things I have learned about React
+Interesting things I have learned about React in class: Node.js is just JavaScript with a fancy package around it that makes it function as a backend language. The event script attribute is the method sayGoodbye() in this line:
+<button onclick="sayGoodbye()">Say Goodbye</button>
+
+Node.JS is how you can run JavaScript outside the browser. It's so things like console.log don't go to the console in the browser, but into the terminal - to the backend. Node Package Manager (NPM) is what lets us share packages and code between various Node.JS programs. After I think it's installed, I should type node -v into my terminal to check if I have it.
 
 ## Other Project Notes
+
+Remember ../ is how you can go UP a directory when linking files.
+
 
 > [!NOTE]
 > This is a template for your startup application. You must modify this `README.md` file for each phase of your development. You only need to fill in the section for each deliverable when that deliverable is submitted in Canvas. Without completing the section for a deliverable, the TA will not know what to look for when grading your submission. Feel free to add additional information to each deliverable description, but make sure you at least have the list of rubric items and a description of what you did for each item.

@@ -1,0 +1,26 @@
+/* MAKE THE BODY A SET HEIGHT, MAYBE BASED ON VH */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Original+Surfer&display=swap');
+
+html {
+    background-color: bisque;
+    font-family: 'Original Surfer';
+}
+
+header {
+    background-color: rgb(106, 64, 27);
+    /* border-bottom-width: 10vh; */
+}
+
+footer {
+    background-color: rgb(106, 64, 27);
+}
+
+.Hyperlink {
+    color: rgb(192, 146, 46);
+}
+
+.metronome_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
