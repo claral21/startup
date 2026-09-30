@@ -6,12 +6,29 @@ html {
     font-family: 'Original Surfer';
 }
 
+body {
+    flex: 7;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: 100vh;
+}
+
 header {
+    flex: 2;
     background-color: rgb(106, 64, 27);
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 20px;
+
     /* border-bottom-width: 10vh; */
 }
 
 footer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
     background-color: rgb(106, 64, 27);
 }
 
@@ -23,4 +40,9 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+
+.footer_words {
+    background-color: rgb(106, 64, 27);
+    margin-left: 5%;
 }
