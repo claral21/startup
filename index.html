@@ -16,7 +16,7 @@
       <!-- Navigation elements -->
       <nav>
         <!-- Menu is a semantic alternative to <ul> that represents an interaction -->
-        <menu>
+        <menu class="navigation">
           <li><a class="Hyperlink" href="index.html">Login</a></li>
           <li><a class="Hyperlink" href="soundmaker.html">Start</a></li>
         </menu>
@@ -28,7 +28,7 @@
 
     <main>
       <h2>Login or Create an Account</h2>
-      <form method="get" action="soundmaker.html">
+      <form method="get" action="soundmaker.html" id="login_form">
         <div>
           <label for="username">Username:</label>
           <input type="text" placeholder="type here" id="username">
@@ -37,11 +37,14 @@
           <label for="password">Password:</label>
           <input type="password" placeholder="password" id="password"/>
         </div>
+        <div class="login_buttons">
         <button type="submit" name="login" value="access_user_info">Login</button>
         <button type="submit" name="create_user" value="save_new_user">Create</button>
+        </div>
       </form>
       <div class="metronome_container">
-      <img src="metronome_icon2.png" alt="MetronomeIMG1" width="300"></div>
+      <img src="metronome_icon2.png" alt="MetronomeIMG1" width="300">
+      </div>
     </main>
     <footer>
       <div class="footer_words">
