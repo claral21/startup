@@ -34,7 +34,6 @@ header {
     width: 100%;
     margin: 0 auto;
     padding-left: 20px;
-    height: 15dvh;
 
     /* border-bottom-width: 10vh; */
 }
@@ -45,7 +44,7 @@ header {
     margin-top: 1dvh;
     margin-left: 2dvw;
     margin-bottom: 1dvh;
-    gap: 2dvw;
+    gap: clamp(25px, 5vw, 30px);
 }
 
 h2 {
@@ -54,11 +53,17 @@ h2 {
     margin-bottom: 2dvh;
 }
 
+h3 {
+    margin-top: 2dvh;
+    text-align: center;
+    margin-bottom: 17dvh;
+}
+
 #login_form {
-    height: 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 1dvh;
 }
 
 .login_buttons {
@@ -79,14 +84,37 @@ h2 {
     object-fit: cover;
 }
 
+aside {
+    float: right;
+    padding: .5em;
+    margin-right: 3dvw;
+    border: solid black thin;
+  }
+
+#button_metronome_align {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#soundmaker_buttons {
+    display: flex;
+    flex-direction: column;
+    margin-left: 3dvw;
+    gap: 1dvh;
+    height: 0;
+    width: 15dvw;
+}
+
 footer {
     /* flex: 1; */
     width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
     background-color: rgb(106, 64, 27);
+
+}
+
+hr {
+    display: none;
 }
 
 .Hyperlink {
@@ -94,6 +122,23 @@ footer {
 }
 
 .footer_words {
-    background-color: rgb(106, 64, 27);
-    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 1dvh;
+    margin-left: 1dvw;
+    margin-bottom: 1dvh;
+    padding: 0;
+}
+
+@media (max-height: 600px) {
+  .metronome_container {
+    display: none;
+  }
+}
+
+@media (max-width: 300px) {
+  .metronome_container {
+    display: none;
+  }
 }
