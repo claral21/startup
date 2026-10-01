@@ -6,6 +6,13 @@ I love web programming.
 - [My startup](https://startup.cs260.click)
 - [My simon](https://simon.cs260.click)
 
+My command to deploy to startup:
+./deployFiles.sh -k ~/keys_to_the_universe/clara_pemkey.pem -h metronomemaker.click -s startup
+
+To simon:
+
+./deployFiles.sh -k ~/keys_to_the_universe/clara_pemkey.pem -h metronomemaker.click -s simon
+
 ## Helpful links
 
 - [Course instruction](https://github.com/webprogramming260)

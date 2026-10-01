@@ -74,7 +74,7 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] I completed the prerequisites for this deliverable (Simon deployed, GitHub link, Git commits)
+- [X] I completed the prerequisites for this deliverable (Simon deployed, GitHub link, Git commits)
 - [X] **Visually appealing colors and layout. No overflowing elements.** - I made sure there were no visible overflowing elements for any general screen size. I used a visually appealing color pallete and overall layout.
 - [X] **Use of a CSS framework** - I utilized the normal CSS framework to structure my project.
 - [X] **All visual elements styled using CSS** - I styled everything using CSS.
