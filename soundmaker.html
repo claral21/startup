@@ -50,25 +50,28 @@
       <div id="button_metronome_align">
       <form id="soundmaker_buttons">
             <div>
+                <audio controls src="https://raw.githubusercontent.com/webprogramming260/webprogramming/main/instruction/html/media/testAudio.mp3">Filler Audio</audio>
+            </div>
+            <button type="button">Generate Random Sound</button>
+            <div>
                 <label for="number">Tempo: </label>
                 <input type="number" name="vNumber" id="number" min="10" max="150" step="5" />  
             </div>
+            <div>
             <label for="text">Name/Rename current sound: </label>
-            <input type="text" id="text" name="vText" />
+            <input type="text" id="text" name="vText" placeholder="Sound Name"/>
             <button type="submit">Save</button>
+            </div>
             <label for="select">Saved Sounds: </label>
             <select id="select" name="vSelect">
                 <option>Chicken_sound</option>
                 <option selected>Bells</option>
                 <option>Random1</option>
             </select>
-            <div>
-                <audio controls src="https://raw.githubusercontent.com/webprogramming260/webprogramming/main/instruction/html/media/testAudio.mp3">Filler Audio</audio>
-                <button type="button">Generate Random Sound</button>
-            </div>
+            
         </form>
         <!--My main code goes here! -->
-        <div class="metronome_container">
+        <div id="metronome_container2">
         <img src="metronome_icon2.png" alt="MetronomeIMG" width="300">
         </div>
         </div>
