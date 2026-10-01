@@ -143,6 +143,11 @@ hr {
     padding: 0;
 }
 
+button:hover {
+  background-color: rgb(192, 146, 46);
+  color: black;
+}
+
 @media (max-height: 600px) {
   #metronome_container1 {
     display: none;
