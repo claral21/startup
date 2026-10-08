@@ -44,6 +44,10 @@ Interesting things I have learned about React in class: Node.js is just JavaScri
 
 Node.JS is how you can run JavaScript outside the browser. It's so things like console.log don't go to the console in the browser, but into the terminal - to the backend. Node Package Manager (NPM) is what lets us share packages and code between various Node.JS programs. After I think it's installed, I should type node -v into my terminal to check if I have it.
 
+MY REACT STEPS:
+1. I have configured Vite and committed
+2. 
+
 ## JS
 
 Using objects, I can make an array of these objects containing key value pairs of the information of my users. Probably better though is to make a class for all of my users, each one as an instance of the class. 

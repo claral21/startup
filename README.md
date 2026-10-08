@@ -10,7 +10,7 @@ Have you ever struggled with your rythym, but can't stand the sound of your metr
 
 ### Design
 
-![Design image](IMG_8887.png)
+![Design image](./Public/IMG_8887.png)
 
 See the above example of the two main screens the app will utilize
 
