@@ -47,7 +47,9 @@ Node.JS is how you can run JavaScript outside the browser. It's so things like c
 MY REACT STEPS:
 1. I have configured Vite and committed
 2. I have reoganized my project
-3. 
+3. I have done the Bootstrap thing
+4. I enabled React
+5. 
 
 ## JS
 
