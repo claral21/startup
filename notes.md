@@ -49,7 +49,8 @@ MY REACT STEPS:
 2. I have reoganized my project
 3. I have done the Bootstrap thing
 4. I enabled React
-5. 
+5. I created the App component
+6. 
 
 ## JS
 

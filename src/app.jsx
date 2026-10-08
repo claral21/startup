@@ -4,7 +4,7 @@ import './app.css';
 
 export default function App() {
   return (
-    <div className="login_body">
+    <div>
       <header>
         <h1>Welcome to MEtronome</h1>
         <nav>
