@@ -1,13 +1,26 @@
 {
   "name": "npmtest",
   "version": "1.0.0",
-  "description": "",
+  "description": "[My Notes](notes.md)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs"
+  "type": "commonjs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/claral21/startup.git"
+  },
+  "bugs": {
+    "url": "https://github.com/claral21/startup/issues"
+  },
+  "homepage": "https://github.com/claral21/startup#readme",
+  "devDependencies": {
+    "vite": "^8.3.4"
+  }
 }
