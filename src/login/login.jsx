@@ -1,17 +1,10 @@
 import React from 'react';
-// import './app.css';
-// ^ might need this
+import '../app';
+
 
 export function Login() {
   return (
     <main className="login_body">
-      <div>login displayed here</div>
-    </main>
-  );
-}
-
-
-/* <main>
         <h2>Login or Create an Account</h2>
         <form method="get" action="soundmaker.html" id="login_form">
           <div>
@@ -31,4 +24,6 @@ export function Login() {
         <div id="metronome_container1">
           <img src="./Public/metronome_icon2.png" alt="MetronomeIMG1" width="300" />
         </div>
-      </main> */
+      </main>
+  );
+}

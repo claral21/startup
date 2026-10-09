@@ -87,8 +87,8 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 1dvh;
     font-family: 'Original Surfer';
+    padding-bottom: 4%
 }
 
 .login_buttons {
