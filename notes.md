@@ -7,11 +7,12 @@ I love web programming.
 - [My simon](https://simon.cs260.click)
 
 My command to deploy to startup:
-./deployFiles.sh -k ~/keys_to_the_universe/clara_pemkey.pem -h metronomemaker.click -s startup
+
+./deployReact.sh -k ~/keys_to_the_universe/clara_pemkey.pem -h metronomemaker.click -s startup
 
 To simon:
 
-./deployFiles.sh -k ~/keys_to_the_universe/clara_pemkey.pem -h metronomemaker.click -s simon
+./deployReact.sh -k ~/keys_to_the_universe/clara_pemkey.pem -h metronomemaker.click -s simon
 
 ## Helpful links
 
@@ -52,7 +53,8 @@ MY REACT STEPS:
 5. I created the App component
 6. I have made my placeholder view components
 7. I did navigation
-8. I'm halfway through this step, still fixing soundmaker css rendering
+8. It took me a hot minute to fix the css but it works!
+9. 
 
 ## JS
 
