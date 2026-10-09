@@ -55,7 +55,7 @@ export function Soundmaker() {
             
         </form>
         <div id="metronome_container2">
-        <img src="./Public/metronome_icon2.png" alt="MetronomeIMG" width="300"/>
+        <img src="/metronome_icon2.png" alt="MetronomeIMG" width="300"/>
         </div>
         </div>
         

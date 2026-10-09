@@ -22,7 +22,7 @@ export function Login() {
         </form>
 
         <div id="metronome_container1">
-          <img src="./Public/metronome_icon2.png" alt="MetronomeIMG1" width="300" />
+          <img src="/metronome_icon2.png" alt="MetronomeIMG1" width="300" />
         </div>
       </main>
   );
