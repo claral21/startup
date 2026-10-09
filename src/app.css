@@ -19,12 +19,12 @@ html {
 
 .soundmaker_body {
     /* flex: 7; */
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     margin: 0;
     overflow-x: hidden;
     /* overflow-y: hidden; */
-    height: 100dvh;
+    height: 100%;
     background-color: bisque;
 }
 
@@ -35,7 +35,7 @@ html {
     margin: 0;
     overflow-x: hidden;
     overflow-y: hidden;
-    height: 100dvh;
+    height: 100%;
     background-color: bisque;
 }
 
@@ -60,7 +60,7 @@ header {
     flex-direction: row;
     margin-top: 1dvh;
     margin-left: 2dvw;
-    margin-bottom: 1dvh;
+    margin-bottom: 0;
     gap: clamp(25px, 5vw, 30px);
     color: black;
 }
@@ -159,7 +159,6 @@ aside {
 
 footer {
     /* flex: 1; */
-    width: 100%;
     background-color: rgb(106, 64, 27);
     position: fixed;
     bottom: 0;
@@ -200,19 +199,32 @@ button:hover {
   #metronome_container1 {
     display: none;
   }
-    #soundmaker_body {
+    .soundmaker_body {
     padding-bottom: 200px;
   }
 }
 
 @media (max-width: 900px) and (max-height: 600px) {
-  #soundmaker_body {
+  .soundmaker_body {
     padding-bottom: 500px;
   }
 }
 
+@media (max-width: 900px) and (min-height: 601px) {
+  .soundmaker_body {
+    padding-bottom: 500px;
+  }
+}
+
+@media (min-width: 900px) and (min-height: 550px) {
+  .soundmaker_body {
+    padding-bottom: 100px;
+    overflow-y: hidden;
+  }
+}
+
 @media (max-width: 400px) {
-  #soundmaker_body {
+  .soundmaker_body {
     padding-bottom: 500px;
   }
 }
@@ -244,18 +256,8 @@ button:hover {
     display: flex;
     flex-direction: column;
   }
-  #soundmaker_buttons {
+  .soundmaker_buttons {
     width: 60dvw;
     gap: 3dvh;
   }
 }
-
-/* @import url('https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css'); */
-
-/*
-.btn-primary {
-  background-color: rgb(145, 102, 65);
-  border-color: black;
-}
-
-*/

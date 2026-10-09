@@ -51,7 +51,8 @@ MY REACT STEPS:
 4. I enabled React
 5. I created the App component
 6. I have made my placeholder view components
-7. 
+7. I did navigation
+8. I'm halfway through this step, still fixing soundmaker css rendering
 
 ## JS
 
