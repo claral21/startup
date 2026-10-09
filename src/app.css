@@ -173,6 +173,10 @@ hr {
     display: none;
 }
 
+.nav-link {
+    color: rgb(192, 146, 46);
+}
+
 .Hyperlink {
     color: rgb(192, 146, 46);
 }

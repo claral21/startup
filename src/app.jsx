@@ -1,41 +1,30 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './app.css';
+import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
+import { Login } from './login/login';
+import { Soundmaker } from './soundmaker/soundmaker';
+
 
 export default function App() {
   return (
+    <BrowserRouter>
     <div>
       <header>
         <h1>Welcome to MEtronome</h1>
         <nav>
           <menu className="navigation">
-            <li><a className="Hyperlink" href="login.html">Login</a></li>
-            <li><a className="Hyperlink" href="soundmaker.html">Start</a></li>
+            <NavLink className="nav-link" to="">Login</NavLink>
+            <NavLink className="nav-link" to="soundmaker">Start</NavLink>
           </menu>
         </nav>
       </header>
 
-      <main>
-        <h2>Login or Create an Account</h2>
-        <form method="get" action="soundmaker.html" id="login_form">
-          <div>
-            <label htmlFor="username">Username:</label>
-            <input type="text" placeholder="type here" id="username" />
-          </div>
-          <div>
-            <label htmlFor="password">Password:</label>
-            <input type="password" placeholder="password" id="password" />
-          </div>
-          <div className="login_buttons">
-            <button type="submit" name="login" value="access_user_info">Login</button>
-            <button type="submit" name="create_user" value="save_new_user">Create</button>
-          </div>
-        </form>
-
-        <div id="metronome_container1">
-          <img src="./Public/metronome_icon2.png" alt="MetronomeIMG1" width="300" />
-        </div>
-      </main>
+      <Routes>
+        <Route path='/' element={<Login />} exact />
+        <Route path='/soundmaker' element={<Soundmaker />} />
+        <Route path='*' element={<NotFound />} />
+    </Routes>
 
       <footer>
         <div className="footer_words">
@@ -44,5 +33,10 @@ export default function App() {
         </div>
       </footer>
     </div>
+    </BrowserRouter>
   );
+}
+
+function NotFound() {
+  return <main className="container-fluid bg-secondary text-center">404: Return to sender. Address unknown.</main>;
 }
