@@ -1,12 +1,13 @@
 import React from 'react';
-import '../app';
+import '../app.css';
 
 
 export function Login() {
   return (
     <main className="login_body">
         <h2>Login or Create an Account</h2>
-        <form method="get" action="soundmaker.html" id="login_form">
+        {/* <form method="get" action="soundmaker.html" id="login_form"> */}
+        <form method="get" id="login_form">
           <div>
             <label htmlFor="username">Username:</label>
             <input type="text" placeholder="type here" id="username" />

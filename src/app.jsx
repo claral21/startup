@@ -13,7 +13,7 @@ export default function App() {
         <h1>Welcome to MEtronome</h1>
         <nav>
           <menu className="navigation">
-            <NavLink className="nav-link" to="">Login</NavLink>
+            <NavLink className="nav-link" to="/">Login</NavLink>
             <NavLink className="nav-link" to="soundmaker">Start</NavLink>
           </menu>
         </nav>
@@ -28,7 +28,7 @@ export default function App() {
       <footer>
         <div className="footer_words">
           <span className="text-reset">Author Name: Clara Pitts</span>
-          <a className="Hyperlink" href="https://github.com">GitHub</a>
+          <a className="Hyperlink" href="https://github.com/claral21/startup">GitHub</a>
         </div>
       </footer>
     </div>

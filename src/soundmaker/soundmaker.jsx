@@ -38,15 +38,15 @@ export function Soundmaker() {
             </div>
             <button type="button">Generate Random Sound</button>
             <div>
-                <label htmlfor="number">Tempo: </label>
+                <label htmlFor="number">Tempo: </label>
                 <input type="number" name="vNumber" id="number" min="10" max="150" step="5" />  
             </div>
             <div>
-            <label htmlfor="text">Name/Rename current sound: </label>
+            <label htmlFor="text">Name/Rename current sound: </label>
             <input type="text" id="text" name="vText" placeholder="Sound Name"/>
             <button type="submit">Save</button>
             </div>
-            <label htmlfor="select">Saved Sounds: </label>
+            <label htmlFor="select">Saved Sounds: </label>
             <select id="select" name="vSelect">
                 <option>Chicken_sound</option>
                 <option selected>Bells</option>
