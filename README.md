@@ -86,10 +86,10 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] I completed the prerequisites for this deliverable (Simon deployed, GitHub link, Git commits)
-- [ ] **Bundled using Vite** - I did not complete this part of the deliverable.
-- [ ] **Components** - I did not complete this part of the deliverable.
-- [ ] **Router** - I did not complete this part of the deliverable.
+- [X] I completed the prerequisites for this deliverable (Simon deployed, GitHub link, Git commits)
+- [X] **Bundled using Vite** - I followed all steps and succesfully bundle with Vite.
+- [X] **Components** - I converted all my website components into React components following all the steps in MasteryLS.
+- [X] **Router** - I sucessfully route from one page to another using the navigation and the pattern shown in MasteryLS.
 
 ## 🚀 React part 2: Reactivity deliverable
 
