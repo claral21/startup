@@ -54,11 +54,15 @@ MY REACT STEPS:
 6. I have made my placeholder view components
 7. I did navigation
 8. It took me a hot minute to fix the css but it works!
-9. 
+9. DONE!
 
 ## JS
 
 Using objects, I can make an array of these objects containing key value pairs of the information of my users. Probably better though is to make a class for all of my users, each one as an instance of the class. 
+
+- document.getElementById('likeButton') asks the browser to find the page element with that id (Because in DOM everything in the page is a JS object). What you get back is itself an object, one that represents the button.
+- display.textContent = ... sets a property on that element object. Changing the property changes the text on screen.
+- button.addEventListener('click', function () {...}) is a method call. This one says “when this button is clicked, run this function.” The function has no name here; it’s called an anonymous function, and you pass it in as an argument.
 
 ## Other Project Notes
 
