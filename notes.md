@@ -3,8 +3,8 @@
 This file represents what I have learned about web programming.
 I love web programming.
 
-- [My startup](https://startup.cs260.click)
-- [My simon](https://simon.cs260.click)
+- [My startup](https://startup.metronomemaker.click)
+- [My simon](https://simon.metronomemaker.click)
 
 My command to deploy to startup:
 
@@ -63,6 +63,47 @@ Using objects, I can make an array of these objects containing key value pairs o
 - document.getElementById('likeButton') asks the browser to find the page element with that id (Because in DOM everything in the page is a JS object). What you get back is itself an object, one that represents the button.
 - display.textContent = ... sets a property on that element object. Changing the property changes the text on screen.
 - button.addEventListener('click', function () {...}) is a method call. This one says “when this button is clicked, run this function.” The function has no name here; it’s called an anonymous function, and you pass it in as an argument.
+
+(I put this here as a reminder so I don't get confused by the acronyms)
+DOM stands for Document Object Model.
+
+Document: the web page (the HTML).
+Object: the browser turns every piece of the page (each button, paragraph, image) into a JavaScript object.
+Model: it’s a representation of the page that your code can work with.
+
+The browser reads your HTML and builds a tree of objects, with <html> at the top and elements nested inside it. When you call document.getElementById(...), you’re searching that tree. Changing an object’s properties changes what appears on screen.
+
+JSON stands for JavaScript Object Notation. It’s a plain-text format for writing data, modeled on how JavaScript writes objects. Because it’s just text, it can travel across the internet between a server and your app. One difference from a JavaScript object: in JSON, keys must be wrapped in double quotes.
+
+Here is an example of an array holding objects:
+
+const posts = [
+  { title: 'First post', likes: 3 },
+  { title: 'Second post', likes: 7 }
+];
+
+posts[1].title  // 'Second post'
+
+(I'm adding this so I can remember for loops in Java haha)
+The classic for loop
+
+for (let i = 0; i < posts.length; i++) {
+  console.log(posts[i].title);
+}
+
+The parentheses hold three parts separated by semicolons:
+
+let i = 0: runs once at the start; creates a counter.
+i < posts.length: checked before each round; the loop continues while this is true.
+i++: runs after each round; adds 1 to the counter (the same ++ from your textbook example).
+Because i is funcioning as the index, it is not a <= posts.length because the length is one higher than the highest index
+
+- You log a parameter by using the $ mark and curly braces within the `` string marks
+function labeler(value, title = 'title') {
+  console.log(`${title}=${value}`);
+}
+
+
 
 ## Other Project Notes
 

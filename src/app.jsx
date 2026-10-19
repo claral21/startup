@@ -39,3 +39,15 @@ export default function App() {
 function NotFound() {
   return <main>404: Return to sender. Address unknown.</main>;
 }
+
+// FUNCTIONS I MIGHT WANT TO USE IN MY PROJECT:
+
+// THIS FUNCTION IS THE GENERAL IDEA BEHIND UPDATING MY TABLE, MINUS DELETING THE FIRST ROW
+// function changeAside() {
+//   const username = document.getElementById('username');
+//   const liveupdatetable = document.getElementById('liveupdatetable');
+//   const item = document.createElement('tr');
+//     item.textContent = username + ' created a new sound';
+//     liveupdatetable.appendChild(item);
+// }
+
