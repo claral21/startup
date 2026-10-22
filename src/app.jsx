@@ -1,11 +1,13 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './app.css';
-import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, NavLink, Route, Routes, } from 'react-router-dom';
 import { Login } from './login/login';
 import { Soundmaker } from './soundmaker/soundmaker';
 
 export default function App() {
+  const [user, setUser] = React.useState(localStorage.getItem('user') || null);
+
   return (
     <BrowserRouter>
     <div>
@@ -14,15 +16,16 @@ export default function App() {
         <nav>
           <menu className="navigation">
             <NavLink className="nav-link" to="/">Login</NavLink>
-            <NavLink className="nav-link" to="soundmaker">Start</NavLink>
+            {user && <NavLink className="nav-link" to="soundmaker">Start</NavLink>}
           </menu>
         </nav>
       </header>
 
       <Routes>
-        <Route path='/' element={<Login />} exact />
-        <Route path='/soundmaker' element={<Soundmaker />} />
+        <Route path='/' element={<Login setUser= {setUser}/>} exact />
+        {user && <Route path='/soundmaker' element={<Soundmaker user= {user}/>} />}
         <Route path='*' element={<NotFound />} />
+
     </Routes>
 
       <footer>

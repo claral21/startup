@@ -103,7 +103,11 @@ function labeler(value, title = 'title') {
   console.log(`${title}=${value}`);
 }
 
+This is how I can display a variable, in this case one from React.useState:
 
+<div>
+{currentusername}
+</div>
 
 ## Other Project Notes
 
