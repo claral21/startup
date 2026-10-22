@@ -109,6 +109,14 @@ This is how I can display a variable, in this case one from React.useState:
 {currentusername}
 </div>
 
+## Service Notes
+
+This is how we authenticate the login! Yay.
+
+if I use an endpoint like: /foods1?limit=10, page=2 GET That can limit the number of things from the database I request, and specify which page (like this could be 11-20)
+
+The service gets its own folder called service and that's the backend! The definitions of the endpoints are there. Using these endpoints, I can write code to connect to the database (that I don't have yet) to autheticate the users (check that they've actually made an account and the username and password match)
+
 ## Other Project Notes
 
 Remember ../ is how you can go UP a directory when linking files.
