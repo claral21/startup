@@ -4,9 +4,10 @@ import { useNavigate } from 'react-router-dom';
 
 export function Login({setUser, user}) {
   const [currentusername, setcurrentusername] = React.useState('');
+  const [currentpassword, setcurrentpassword] = React.useState('');
   const navigate = useNavigate();
   function loginUser(){
-    localStorage.setItem('user', currentusername);
+    localStorage.setItem('user', `${currentusername} ${currentpassword}`);
     setUser(currentusername);
     navigate('/soundmaker');
   }
@@ -17,7 +18,10 @@ export function Login({setUser, user}) {
 
   function nameisinput(e){ // in this case the e is an event that comes from the DOM, we need to remember it
     setcurrentusername(e.target.value);
-    console.log(e.target.value);
+  }
+
+  function passwordisinput(e){
+    setcurrentpassword(e.target.value);
   }
 
   function loginform () {
@@ -29,12 +33,12 @@ export function Login({setUser, user}) {
           </div>
           <div>
             <label htmlFor="password">Password:</label>
-            <input type="password" placeholder="password" id="password" />
+            <input type="password" placeholder="password" id="password" onChange = {passwordisinput}/>
           </div>
           <div className="login_buttons">
             {/* the loginUser function call below is to simulate the eventual login process */}
             <button type="button" name="login" value="access_user_info" onClick = {loginUser}>Login</button> {/* I got rid of type="submit" */}
-            <button type="button" name="create_user" value="save_new_user">Create</button> {/* I got rid of type="submit" */}
+            <button type="button" name="create_user" value="save_new_user" onClick = {loginUser}>Create</button> {/* I got rid of type="submit" */}
           </div>
         </form>
     );
