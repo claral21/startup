@@ -95,9 +95,9 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] I completed the prerequisites for this deliverable (Simon deployed, GitHub link, Git commits)
-- [ ] **All functionality implemented or mocked out** - I did not complete this part of the deliverable.
-- [ ] **Hooks** - I did not complete this part of the deliverable.
+- [X] I completed the prerequisites for this deliverable (Simon deployed, GitHub link, Git commits)
+- [X] **All functionality implemented or mocked out** - There is a placeholder in place or working functionality for everything. Currently the audio box acts as a placeholder for recording sound until there's a database. Local storage is insufficient for audio clips.
+- [X] **Hooks** - I learned about and used the useState and useEffect along with setInterval and some other fun React things!
 
 ## 🚀 Service deliverable
 
