@@ -114,6 +114,14 @@ h3 {
     padding-bottom: 4%
 }
 
+#logout_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Original Surfer';
+    padding-bottom: 4%
+}
+
 .login_buttons {
     display: flex;
     flex-direction: row;

@@ -23,7 +23,7 @@ export default function App() {
       </header>
 
       <Routes>
-        <Route path='/' element={<Login setUser= {setUser}/>} exact />
+        <Route path='/' element={<Login setUser= {setUser} user= {user}/>} exact />
         {user && <Route path='/soundmaker' element={<Soundmaker user= {user}/>} />}
         <Route path='*' element={<NotFound />} />
 

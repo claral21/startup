@@ -5,6 +5,7 @@ export function Soundmaker({user}) {
   const [msg, setMsg] = React.useState('...listening');
   const [playing, setPlaying] = React.useState(false);
   const [tempo, setTempo] = React.useState(60);   // beats per minute, default 60
+  const [temporarysoundname, settemporarySoundName] = React.useState(""); // This is a placeholder for the usermade sound names for when we have a database
   const [currentsound, setcurrentSound] = React.useState("/bottle.m4a");
   const [soundName, setSoundName] = React.useState('Bottle');
   const [savedSounds, setSavedSounds] = React.useState(['Bottle']);
@@ -22,6 +23,13 @@ export function Soundmaker({user}) {
       { name: 'Thud', url: '/thud.m4a' },
       { name: 'Whack', url: '/whack.m4a' },
     ];
+
+  function saveSoundName() {
+  if (!temporarysoundname) return;   // ignore an empty name
+  localStorage.setItem(temporarysoundname, currentsound);
+  settemporarySoundName('');         // clear the box afterwards
+}
+
 
   function generateSound() {
     const pick = sounds[Math.floor(Math.random() * sounds.length)];
@@ -105,8 +113,13 @@ React.useEffect(() => {
             </div>
             <div>
             <label htmlFor="text">Name/Rename current sound: </label>
-            <input type="text" id="text" name="vText" placeholder="Sound Name"/>
-            <button type="button">Save</button>
+            <input  type="text"
+              id="text"
+              name="vText"
+              placeholder="Sound Name"
+              value={temporarysoundname}
+              onChange={(e) => settemporarySoundName(e.target.value)}/>
+            <button type="button" onClick={saveSoundName}>Save</button>
             </div>
             <label htmlFor="select">Saved Sounds: </label>
             <select id="select" name="vSelect" value={soundName} onChange={chooseSound}>
