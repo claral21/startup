@@ -62,6 +62,16 @@ html {
     background-color: bisque;
 }
 
+#number {
+  text-align: right;
+}
+
+#tempobuttons{
+  display:flex;
+  flex: row;
+  gap: clamp(5px, 1vw, 15px);
+}
+
 main {
     flex-grow: 1;
     background-color: bisque;
