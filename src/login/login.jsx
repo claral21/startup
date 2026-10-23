@@ -61,25 +61,6 @@ export function Login({setUser, user}) {
         <div className="login-container">
         {user ? logoutform() : loginform()}
         </div>
-
-        {/*}
-        <form method="get" id="login_form">
-          <div>
-            <label htmlFor="username">Username:</label>
-            <input type="text" placeholder="type here" id="username" onChange = {nameisinput} />
-          </div>
-          <div>
-            <label htmlFor="password">Password:</label>
-            <input type="password" placeholder="password" id="password" />
-          </div>
-          <div className="login_buttons">
-            {/* the loginUser function call below is to simulate the eventual login process */} {/*}
-            <button type="button" name="login" value="access_user_info" onClick = {loginUser}>Login</button>
-            <button type="button" name="create_user" value="save_new_user">Create</button> 
-          </div>
-        </form> 
-        */}
-
         <div id="metronome_container1">
           <img src="/metronome_icon2.png" alt="MetronomeIMG1" width="300" />
         </div>
