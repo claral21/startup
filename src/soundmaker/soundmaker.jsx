@@ -10,13 +10,17 @@ export function Soundmaker({user}) {
   const [savedSounds, setSavedSounds] = React.useState(['Bottle']);
   const sounds = [ // Placeholder for getting the sounds from storage because audio files are big
       { name: 'Snap', url: '/Snap.m4a' },
-      { name: 'Random4', url: '/button-bottom-left.mp3' },
-      { name: 'Random1', url: '/button-bottom-right.mp3' },
-      { name: 'Random2', url: '/button-top-right.mp3' },
-      { name: 'Random3', url: '/button-top-left.mp3' },
+      { name: 'Simon4', url: '/button-bottom-left.mp3' },
+      { name: 'Simon1', url: '/button-bottom-right.mp3' },
+      { name: 'Simon2', url: '/button-top-right.mp3' },
+      { name: 'Simon3', url: '/button-top-left.mp3' },
       { name: 'Error', url: '/error.mp3' },
       { name: 'Bottle', url: '/bottle.m4a' },
       { name: 'Boom', url: '/boom.m4a' },
+      { name: 'Scrape', url: '/scrape.m4a' },
+      { name: 'Swish', url: '/swish.m4a' },
+      { name: 'Thud', url: '/thud.m4a' },
+      { name: 'Whack', url: '/whack.m4a' },
     ];
 
   function generateSound() {
