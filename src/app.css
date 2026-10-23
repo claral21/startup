@@ -39,6 +39,29 @@ html {
     background-color: bisque;
 }
 
+.unicorn_content {
+    /* flex: 7; */
+    display: flex;
+    flex-direction: column;
+    justify-content:  center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: 100%;
+    background-color: bisque;
+}
+
+.unicorn_body {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;   /* centers the box horizontally */
+    align-items: center;       /* centers the box vertically */
+    min-height: 60vh;
+    background-color: bisque;
+}
+
 main {
     flex-grow: 1;
     background-color: bisque;

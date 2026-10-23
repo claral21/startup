@@ -4,6 +4,7 @@ import './app.css';
 import { BrowserRouter, NavLink, Route, Routes, } from 'react-router-dom';
 import { Login } from './login/login';
 import { Soundmaker } from './soundmaker/soundmaker';
+import { NotFound } from './notfound/notfound';
 
 export default function App() {
   const [user, setUser] = React.useState(localStorage.getItem('user') || null);
@@ -37,10 +38,6 @@ export default function App() {
     </div>
     </BrowserRouter>
   );
-}
-
-function NotFound() {
-  return <main>404: Return to sender. Address unknown.</main>;
 }
 
 // FUNCTIONS I MIGHT WANT TO USE IN MY PROJECT:
