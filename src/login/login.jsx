@@ -7,6 +7,7 @@ export function Login({setUser, user}) {
   const [currentpassword, setcurrentpassword] = React.useState('');
   const navigate = useNavigate();
   function loginUser(){
+    if (!currentusername.trim()) return;
     localStorage.setItem('user', `${currentusername} ${currentpassword}`);
     setUser(currentusername);
     navigate('/soundmaker');
