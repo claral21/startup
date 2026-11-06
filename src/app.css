@@ -72,6 +72,12 @@ html {
   gap: clamp(5px, 1vw, 15px);
 }
 
+#namebuttons{
+  display:flex;
+  flex: row;
+  gap: clamp(5px, 1vw, 9px);
+}
+
 main {
     flex-grow: 1;
     background-color: bisque;

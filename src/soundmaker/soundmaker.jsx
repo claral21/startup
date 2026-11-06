@@ -77,6 +77,17 @@ const pickRandom = (list) => list[Math.floor(Math.random() * list.length)];
   }
   }
 
+  async function getNameSuggestion() {
+    try {
+      const response = await fetch('https://binaryjazz.us/wp-json/genrenator/v1/genre/');
+      const genre = await response.json();
+      settemporarySoundName(genre);   // fills the name box with the suggestion
+    } catch (error) {
+      settemporarySoundName({user});
+      console.error('Could not load a name suggestion:', error);
+    }
+  }
+
   React.useEffect(() => {
   if (!playing || !tempo) return;
 
@@ -134,7 +145,11 @@ const pickRandom = (list) => list[Math.floor(Math.random() * list.length)];
               placeholder="Sound Name"
               value={temporarysoundname}
               onChange={(e) => settemporarySoundName(e.target.value)}/>
+              <div id="namebuttons">
+            <button type="button" id="genreBtn" onClick={getNameSuggestion}>Name Suggestion</button>
+            <p id="genreText"></p>
             <button type="button" onClick={saveSoundName}>Save</button>
+            </div>
             </div>
             <label htmlFor="select">Saved Sounds: </label>
             <select id="select" name="vSelect" value={soundName} onChange={chooseSound}>

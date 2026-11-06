@@ -8,7 +8,7 @@ export function Login({setUser, user}) {
   const navigate = useNavigate();
   function loginUser(){
     if (!currentusername.trim()) return;
-    localStorage.setItem('user', `${currentusername} ${currentpassword}`);
+    localStorage.setItem('user', `${currentusername}`);
     setUser(currentusername);
     navigate('/soundmaker');
   }
