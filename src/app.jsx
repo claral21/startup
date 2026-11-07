@@ -5,9 +5,12 @@ import { BrowserRouter, NavLink, Route, Routes, } from 'react-router-dom';
 import { Login } from './login/login';
 import { Soundmaker } from './soundmaker/soundmaker';
 import { NotFound } from './notfound/notfound';
+import { AuthState } from './login/authState';
 
 export default function App() {
-  const [user, setUser] = React.useState(localStorage.getItem('user') || null);
+  const [userName, setUserName] = React.useState(localStorage.getItem('user') || '');
+  const currentAuthState = userName ? AuthState.Authenticated : AuthState.Unauthenticated;
+  const [authState, setAuthState] = React.useState(currentAuthState);
 
   return (
     <BrowserRouter>
@@ -17,14 +20,21 @@ export default function App() {
         <nav>
           <menu className="navigation">
             <NavLink className="nav-link" to="/">Login</NavLink>
-            {user && <NavLink className="nav-link" to="soundmaker">Start</NavLink>}
+            {authState === AuthState.Authenticated && <NavLink className="nav-link" to="soundmaker">Start</NavLink>}
           </menu>
         </nav>
       </header>
 
       <Routes>
-        <Route path='/' element={<Login setUser= {setUser} user= {user}/>} exact />
-        {user && <Route path='/soundmaker' element={<Soundmaker user= {user}/>} />}
+        <Route path='/' element={<Login
+                userName={userName}
+                authState={authState}
+                onAuthChange={(userName, authState) => {
+                  setAuthState(authState);
+                  setUserName(userName);
+                }}
+              />} exact />
+        {authState === AuthState.Authenticated && <Route path='/soundmaker' element={<Soundmaker user= {userName}/>} />}
         <Route path='*' element={<NotFound />} />
 
     </Routes>

@@ -29,7 +29,7 @@ I am going to use the required technologies in the following ways.
 - **HTML** - Creating a solid structure for both my login page and main webpage. Using HTML with correct structure and including any necessary links to simon or other third parties.
 - **CSS** - Styling my application in a simple but elegant way, using basic colors to complement the metronome symbol in a way that will adjust well to various screen sizes. And making the buttons look like buttons.
 - **React** - Providing the live, moving parts of the frontend, namely displaying the notifications of created sounds, the login, capturing sound clip naming, and other more complex graphic elements such as altering icons during user interaction. 
-- **Service** - Interacts with https://freesound.org/docs/api/ api and sends data to frontend. Provides other standard backend service with endpoints for:
+- **Service** - Interacts with https://binaryjazz.us/genrenator-api/ api and sends data to frontend. Provides other standard backend service with endpoints for:
 user login information
 saving audio clips & names
 
@@ -104,13 +104,13 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
 - [ ] I completed the prerequisites for this deliverable (Simon deployed, GitHub link, Git commits)
-- [ ] **Node.js/Express HTTP service** - I did not complete this part of the deliverable.
-- [ ] **Static middleware for frontend** - I did not complete this part of the deliverable.
-- [ ] **Calls to third party endpoints** - I did not complete this part of the deliverable.
+- [X] **Node.js/Express HTTP service** - I use Node.js and Express to provide my backend service
+- [X] **Static middleware for frontend** - I employ static middleware to serve up files and data
+- [X] **Calls to third party endpoints** - I use the Binary Jazz generator to suggest sound names to users.
 - [ ] **Backend service endpoints** - I did not complete this part of the deliverable.
 - [ ] **Frontend calls service endpoints** - I did not complete this part of the deliverable.
-- [ ] **Supports registration, login, logout, and restricted endpoint** - I did not complete this part of the deliverable.
-- [ ] **Uses BCrypt to hash passwords** - I did not complete this part of the deliverable.
+- [X] **Supports registration, login, logout, and restricted endpoint** - I utilized endpoints to facilitate all of these aspects of login authentication.
+- [X] **Uses BCrypt to hash passwords** - I followed the pattern Simon laid out to sucessfully hash passwords.
 
 ## 🚀 DB deliverable
 
