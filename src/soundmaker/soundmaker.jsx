@@ -85,7 +85,7 @@ const pickRandom = (list) => list[Math.floor(Math.random() * list.length)];
     const pick = sounds[Math.floor(Math.random() * sounds.length)];
     setcurrentSound(pick.soundpath);
     setSoundName(pick.soundname);
-    setnameInput(pick.soundname);
+    setsoundnameInput(pick.soundname);
     // if (!savedSounds.includes(pick.soundname)){
     // setSavedSounds([...savedSounds, pick.soundname]);  // add the name to the list if it's not there
     // }
@@ -175,11 +175,10 @@ const pickRandom = (list) => list[Math.floor(Math.random() * list.length)];
             </div>
             <label htmlFor="select">Saved Sounds: </label>
             <select id="select" name="vSelect" value={soundName} onChange={chooseSound}>
-              {savedSounds.map((name) => (
-              <option key={name} value={name}>{name}</option>
+            {savedSounds.map((s) => (
+            <option key={s.soundname} value={s.soundname}>{s.soundname}</option>
             ))}
-            </select>
-            
+          </select>      
         </form>
         <div id="metronome_container2">
         <img src="/metronome_icon2.png" alt="MetronomeIMG" width="300"/>
