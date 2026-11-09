@@ -31,12 +31,11 @@ export function Soundmaker({user}) {
       { name: 'Rattle', url: '/rattle.m4a' },
     ];
 
-  // function saveSoundName() {
-  // if (!currentsoundname) return;   
-  // localStorage.setItem(`sound_${currentsoundname}`, currentsound);
-  // updatesoundtable(user, currentsoundname)
-  // setcurrentSoundName('');         
-  // }
+  React.useEffect(() => { // this should make the saved sounds list start where it left off
+    fetch('/api/sounds')
+      .then((response) => response.json())
+      .then((list) => setSavedSounds(list));
+  }, []);
 
   async function saveSound() {
     if (!soundnameInput) return; // ignore an empty name
@@ -45,8 +44,12 @@ export function Soundmaker({user}) {
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify({ soundname: soundnameInput, soundpath: currentsound }),
     });
-    updatesoundtable(user, soundnameInput)
-    setsoundnameInput('');  // clear the box afterwards
+    if (response.ok) {
+    setSavedSounds(await response.json());   // server returns the updated list
+    updatesoundtable(user, nameInput);
+    setNameInput('');
+  }
+
   }
 
 const fakeUsers = ['Eich', 'Pat', 'Robin', 'Taylor'];
