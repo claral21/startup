@@ -14,21 +14,21 @@ export function Soundmaker({user}) {
   const [soundName, setSoundName] = React.useState('Bottle');
   const [savedSounds, setSavedSounds] = React.useState(['Bottle']);
   const sounds = [ // Placeholder for getting the sounds from storage because audio files are big
-      { name: 'Snap', url: '/Snap.m4a' },
-      { name: 'Simon4', url: '/button-bottom-left.mp3' },
-      { name: 'Simon1', url: '/button-bottom-right.mp3' },
-      { name: 'Simon2', url: '/button-top-right.mp3' },
-      { name: 'Simon3', url: '/button-top-left.mp3' },
-      { name: 'Error', url: '/error.mp3' },
-      { name: 'Bottle', url: '/bottle.m4a' },
-      { name: 'Boom', url: '/boom.m4a' },
-      { name: 'Scrape', url: '/scrape.m4a' },
-      { name: 'Swish', url: '/swish.m4a' },
-      { name: 'Thud', url: '/thud.m4a' },
-      { name: 'Whack', url: '/whack.m4a' },
-      { name: 'Ducky', url: '/ducky.m4a' },
-      { name: 'Bam', url: '/bam.m4a' },
-      { name: 'Rattle', url: '/rattle.m4a' },
+      { soundname: 'Snap', soundpath: '/Snap.m4a' },
+      { soundname: 'Simon4', soundpath: '/button-bottom-left.mp3' },
+      { soundname: 'Simon1', soundpath: '/button-bottom-right.mp3' },
+      { soundname: 'Simon2', soundpath: '/button-top-right.mp3' },
+      { soundname: 'Simon3', soundpath: '/button-top-left.mp3' },
+      { soundname: 'Error', soundpath: '/error.mp3' },
+      { soundname: 'Bottle', soundpath: '/bottle.m4a' },
+      { soundname: 'Boom', soundpath: '/boom.m4a' },
+      { soundname: 'Scrape', soundpath: '/scrape.m4a' },
+      { soundname: 'Swish', soundpath: '/swish.m4a' },
+      { soundname: 'Thud', soundpath: '/thud.m4a' },
+      { soundname: 'Whack', soundpath: '/whack.m4a' },
+      { soundname: 'Ducky', soundpath: '/ducky.m4a' },
+      { soundname: 'Bam', soundpath: '/bam.m4a' },
+      { soundname: 'Rattle', soundpath: '/rattle.m4a' },
     ];
 
   React.useEffect(() => { // this should make the saved sounds list start where it left off
@@ -72,24 +72,22 @@ const pickRandom = (list) => list[Math.floor(Math.random() * list.length)];
   );
   }
 
-  function generateSound() {
+  function generateSound() { // this doesn't save the sound anymore
     const pick = sounds[Math.floor(Math.random() * sounds.length)];
-    setcurrentSound(pick.url);
-    setSoundName(pick.name);
-    if (!savedSounds.includes(pick.name)){
-    setSavedSounds([...savedSounds, pick.name]);  // add the name to the list if it's not there
-    }
+    setcurrentSound(pick.soundpath);
+    setSoundName(pick.soundname);
+    // if (!savedSounds.includes(pick.soundname)){
+    // setSavedSounds([...savedSounds, pick.soundname]);  // add the name to the list if it's not there
+    // }
   }
 
   function chooseSound(e) {
-  const chosenName = e.target.value;
-  const match = sounds.find((s) => s.name === chosenName);
-
-  setSoundName(chosenName);
+  const match = savedSounds.find((s) => s.soundname === e.target.value);
   if (match) {
-    setcurrentSound(match.url);
+    setSoundName(match.soundname);
+    setcurrentSound(match.soundpath);
   }
-  }
+}
 
   async function getNameSuggestion() {
     try {
