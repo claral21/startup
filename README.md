@@ -103,12 +103,12 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] I completed the prerequisites for this deliverable (Simon deployed, GitHub link, Git commits)
+- [X] I completed the prerequisites for this deliverable (Simon deployed, GitHub link, Git commits)
 - [X] **Node.js/Express HTTP service** - I use Node.js and Express to provide my backend service
 - [X] **Static middleware for frontend** - I employ static middleware to serve up files and data
 - [X] **Calls to third party endpoints** - I use the Binary Jazz generator to suggest sound names to users.
-- [ ] **Backend service endpoints** - I did not complete this part of the deliverable.
-- [ ] **Frontend calls service endpoints** - I did not complete this part of the deliverable.
+- [X] **Backend service endpoints** - There are endpoints for user and sound service
+- [X] **Frontend calls service endpoints** - The endpoints for user and sounds are called in the frontend
 - [X] **Supports registration, login, logout, and restricted endpoint** - I utilized endpoints to facilitate all of these aspects of login authentication.
 - [X] **Uses BCrypt to hash passwords** - I followed the pattern Simon laid out to sucessfully hash passwords.
 
