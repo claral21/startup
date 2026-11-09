@@ -74,14 +74,15 @@ const verifyAuth = async (req, res, next) => {
 };
 
 // GetSounds // I think this one's done
-apiRouter.get('/sounds', verifyAuth, (_req, res) => {
-  res.send(soundsmap);
+apiRouter.get('/sounds', verifyAuth, (req, res) => {
+  res.send(soundsmap.get(req.user.username) ?? []);
 });
 
 // SubmitSounds // I think this one's done too
 apiRouter.post('/sounds', verifyAuth, (req, res) => {
-  updateSounds(req.body);
-  res.send(soundsmap);
+  const { soundname, soundpath } = req.body;
+  updateSounds(soundname, soundpath, req.user.username);
+  res.send(soundsmap.get(req.user.username));
 });
 
 // Default error handler
