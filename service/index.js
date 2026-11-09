@@ -81,7 +81,11 @@ apiRouter.get('/sounds', verifyAuth, (req, res) => {
 // SubmitSounds // I think this one's done too
 apiRouter.post('/sounds', verifyAuth, (req, res) => {
   const { soundname, soundpath } = req.body;
-  updateSounds(soundname, soundpath, req.user.username);
+  const added = updateSounds(soundname, soundpath, req.user.username);
+  if (!added) {
+    res.status(409).send({ msg: 'Name Already Used' });
+    return;
+  }
   res.send(soundsmap.get(req.user.username));
 });
 
@@ -106,7 +110,8 @@ function updateSounds(newSoundname, soundfile, currentuser) {
   for (const soundobject of currentsoundlist) {
     if (newSoundname == soundobject.soundname) {
         found = true
-        break;
+        // res.status(409).send({ msg: 'Name Already Used' });
+        return false;
     }
   }
   if (!found) {
@@ -114,6 +119,7 @@ function updateSounds(newSoundname, soundfile, currentuser) {
     const updatedsoundlist = [...currentsoundlist, newsound]; 
     soundsmap.set(currentuser, updatedsoundlist)
   }
+  return true;
 }
 
 async function createUser(username, password) {

@@ -1,8 +1,10 @@
 import React from 'react';
+import { MessageDialog } from '../messageDialog';
 import '../app.css';
 
 export function Soundmaker({user}) {
   const [msg, setMsg] = React.useState('...listening'); // I will use this later for websocket
+  const [displayError, setDisplayError] = React.useState(null);
   const [userqueue, setUserqueue] = React.useState([
   { id: 1, name: 'Sam', sound: 'Snap' },
   { id: 2, name: 'Jamie', sound: 'Boom' },
@@ -38,19 +40,26 @@ export function Soundmaker({user}) {
   }, []);
 
   async function saveSound() {
-    if (!soundnameInput) return; // ignore an empty name
-    await fetch('/api/sounds', {
+  if (!soundnameInput) return; // ignore an empty name
+  try {
+    const response = await fetch('/api/sounds', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify({ soundname: soundnameInput, soundpath: currentsound }),
     });
     if (response.ok) {
-    setSavedSounds(await response.json());   // server returns the updated list
-    updatesoundtable(user, nameInput);
-    setNameInput('');
+      setSavedSounds(await response.json());
+      updatesoundtable(user, soundnameInput);
+      setsoundnameInput('');
+      setDisplayError(null);
+    } else {
+      const body = await response.json();
+      setDisplayError(`⚠ Error: ${body.msg}`);
+    }
+  } catch (error) {
+    setDisplayError('⚠ Error: could not reach the server');
   }
-
-  }
+}
 
 const fakeUsers = ['Eich', 'Pat', 'Robin', 'Taylor'];
 const fakeSounds = ['Chickens', 'Thud', 'Whack', 'Scrape'];
@@ -76,6 +85,7 @@ const pickRandom = (list) => list[Math.floor(Math.random() * list.length)];
     const pick = sounds[Math.floor(Math.random() * sounds.length)];
     setcurrentSound(pick.soundpath);
     setSoundName(pick.soundname);
+    setnameInput(pick.soundname);
     // if (!savedSounds.includes(pick.soundname)){
     // setSavedSounds([...savedSounds, pick.soundname]);  // add the name to the list if it's not there
     // }
@@ -175,7 +185,7 @@ const pickRandom = (list) => list[Math.floor(Math.random() * list.length)];
         <img src="/metronome_icon2.png" alt="MetronomeIMG" width="300"/>
         </div>
         </div>
-        
+        <MessageDialog message={displayError} onHide={() => setDisplayError(null)} />
     </main>
   );
 }

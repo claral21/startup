@@ -1,5 +1,5 @@
 import React from 'react';
-import { MessageDialog } from './messageDialog';
+import { MessageDialog } from '../messageDialog';
 import { useNavigate } from 'react-router-dom';
 import '../app.css';
 
