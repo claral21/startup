@@ -9,7 +9,7 @@ export function Soundmaker({user}) {
   { id: 3, name: 'Elaina', sound: 'Swish' },]);
   const [playing, setPlaying] = React.useState(false);
   const [tempo, setTempo] = React.useState(60);   // beats per minute, default 60
-  const [temporarysoundname, settemporarySoundName] = React.useState(""); // This is a placeholder for the usermade sound names for when we have a database
+  const [soundnameInput, setsoundnameInput] = React.useState(""); // This is a placeholder for the usermade sound names for when we have a database
   const [currentsound, setcurrentSound] = React.useState("/bottle.m4a");
   const [soundName, setSoundName] = React.useState('Bottle');
   const [savedSounds, setSavedSounds] = React.useState(['Bottle']);
@@ -31,11 +31,22 @@ export function Soundmaker({user}) {
       { name: 'Rattle', url: '/rattle.m4a' },
     ];
 
-  function saveSoundName() {
-  if (!temporarysoundname) return;   // ignore an empty name
-  localStorage.setItem(`sound_${temporarysoundname}`, currentsound);
-  updatesoundtable(user, temporarysoundname)
-  settemporarySoundName('');         // clear the box afterwards
+  // function saveSoundName() {
+  // if (!currentsoundname) return;   
+  // localStorage.setItem(`sound_${currentsoundname}`, currentsound);
+  // updatesoundtable(user, currentsoundname)
+  // setcurrentSoundName('');         
+  // }
+
+  async function saveSound() {
+    if (!soundnameInput) return; // ignore an empty name
+    await fetch('/api/sounds', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ soundname: soundnameInput, soundpath: currentsound }),
+    });
+    updatesoundtable(user, soundnameInput)
+    setsoundnameInput('');  // clear the box afterwards
   }
 
 const fakeUsers = ['Eich', 'Pat', 'Robin', 'Taylor'];
@@ -81,9 +92,9 @@ const pickRandom = (list) => list[Math.floor(Math.random() * list.length)];
     try {
       const response = await fetch('https://binaryjazz.us/wp-json/genrenator/v1/genre/');
       const genre = await response.json();
-      settemporarySoundName(genre);   // fills the name box with the suggestion
+      setsoundnameInput(genre);   // fills the name box with the suggestion
     } catch (error) {
-      settemporarySoundName({user});
+      setsoundnameInput({user});
       console.error('Could not load a name suggestion:', error);
     }
   }
@@ -143,12 +154,12 @@ const pickRandom = (list) => list[Math.floor(Math.random() * list.length)];
               id="text"
               name="vText"
               placeholder="Sound Name"
-              value={temporarysoundname}
-              onChange={(e) => settemporarySoundName(e.target.value)}/>
+              value={soundnameInput}
+              onChange={(e) => setsoundnameInput(e.target.value)}/>
               <div id="namebuttons">
             <button type="button" id="genreBtn" onClick={getNameSuggestion}>Name Suggestion</button>
             <p id="genreText"></p>
-            <button type="button" onClick={saveSoundName}>Save</button>
+            <button type="button" onClick={saveSound}>Save</button>
             </div>
             </div>
             <label htmlFor="select">Saved Sounds: </label>

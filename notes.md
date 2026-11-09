@@ -8,11 +8,11 @@ I love web programming.
 
 My command to deploy to startup:
 
-./deployReact.sh -k ~/keys_to_the_universe/clara_pemkey.pem -h metronomemaker.click -s startup
+./deployService.sh -k ~/keys_to_the_universe/clara_pemkey.pem -h metronomemaker.click -s startup
 
 To simon:
 
-./deployReact.sh -k ~/keys_to_the_universe/clara_pemkey.pem -h metronomemaker.click -s simon
+./deployService.sh -k ~/keys_to_the_universe/clara_pemkey.pem -h metronomemaker.click -s simon
 
 ## Helpful links
 

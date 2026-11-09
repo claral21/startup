@@ -8,6 +8,7 @@ const authCookieName = 'token';
 
 // The users are saved in memory and disappear whenever the service is restarted.
 let users = [];
+const soundsmap = new Map();
 
 // The service port. In production the front-end code is statically hosted by the service on the same port.
 const port = process.argv.length > 2 ? process.argv[2] : 4000;
@@ -65,22 +66,23 @@ apiRouter.delete('/auth/logout', async (req, res) => {
 const verifyAuth = async (req, res, next) => {
   const user = await findUser('token', req.cookies[authCookieName]);
   if (user) {
+    req.user = user;   // handlers can now use req.user
     next();
   } else {
     res.status(401).send({ msg: 'Unauthorized' });
   }
 };
 
-// GetScores
-// apiRouter.get('/scores', verifyAuth, (_req, res) => {
-//   res.send(scores);
-// });
+// GetSounds // I think this one's done
+apiRouter.get('/sounds', verifyAuth, (_req, res) => {
+  res.send(soundsmap);
+});
 
-// SubmitScore
-// apiRouter.post('/score', verifyAuth, (req, res) => {
-//   gscores = updateScores(req.body);
-//   res.send(scores);
-// });
+// SubmitSounds // I think this one's done too
+apiRouter.post('/sounds', verifyAuth, (req, res) => {
+  updateSounds(req.body);
+  res.send(soundsmap);
+});
 
 // Default error handler
 app.use(function (err, req, res, next) {
@@ -93,26 +95,25 @@ app.use((_req, res) => {
 });
 
 // updateScores considers a new score for inclusion in the high scores.
-// function updateScores(newScore) {
-//   let found = false;
-//   for (const [i, prevScore] of scores.entries()) {
-//     if (newScore.score > prevScore.score) {
-//       scores.splice(i, 0, newScore);
-//       found = true;
-//       break;
-//     }
-//   }
-
-//   if (!found) {
-//     scores.push(newScore);
-//   }
-
-//   if (scores.length > 10) {
-//     scores.length = 10;
-//   }
-
-//   return scores;
-// }
+function updateSounds(newSoundname, soundfile, currentuser) {
+  let found = false;
+  //   key: "Clara",
+  //   value: [{soundname: "Ducky" soundpath: "/ducky.m4a"}, {soundname: "Rattle" soundpath: "/rattle.m4a"}]
+  //   }
+  // for the current user's sounds, if the sound name is found, don't add
+  const currentsoundlist = soundsmap.get(currentuser) ?? [];
+  for (const soundobject of currentsoundlist) {
+    if (newSoundname == soundobject.soundname) {
+        found = true
+        break;
+    }
+  }
+  if (!found) {
+    const newsound = { soundname: newSoundname, soundpath: soundfile };
+    const updatedsoundlist = [...currentsoundlist, newsound]; 
+    soundsmap.set(currentuser, updatedsoundlist)
+  }
+}
 
 async function createUser(username, password) {
   const passwordHash = await bcrypt.hash(password, 10);
